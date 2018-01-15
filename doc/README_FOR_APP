@@ -1,0 +1,45 @@
+Use this README file to introduce your application and point to useful places in the API for learning more.
+Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+===================================
+TARGET:
+	Sorting colomns of Article tables on site wwww.up.mk.ua
+
+PLAN (Experiment with columns on Primer1 Application).
+	1. create table Articles ()
+		create_table "articles", :force => true do |t|
+		    t.string   "title"
+		    -t.text     "content"
+		    -t.text     "undertitle"
+		    -t.integer  "pub_time"
+		    t.string   "author"
+		    -t.integer  "priority"
+		    t.datetime "created_at",         :null => false
+		    t.datetime "updated_at",         :null => false
+		    t.string   "anonce"
+		    t.string   "rubric"
+		    -t.string   "edition"
+		    -t.string   "pdf_file"
+		    -t.string   "genre"
+		    -t.string   "image_file_name"
+		    -t.string   "image_content_type"
+		    -t.integer  "image_file_size"
+		    -t.datetime "image_updated_at"
+		  end
+
+		 create_table "articles", :force => true do |t|
+		    t.string   "title"
+		    t.string   "author"
+		    t.datetime "created_at",         :null => false
+		    t.datetime "updated_at",         :null => false
+		    t.string   "anonce"
+		    t.string   "rubric"
+		 end
+
+	2. create seed file (10-15 items)	
+	
+	3. create view Articles_List
+
+	4. add colums sorting from lesson
+
+	 
