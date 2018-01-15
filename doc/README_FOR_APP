@@ -1,9 +1,53 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
 
-===================================
+
+
+git remote add prim1 https://github.com/sergugol/primer1.git
+
+serg@ubuntu:~/primer1$ git remote show prim1
+* remote prim1
+  Fetch URL: https://github.com/sergugol/primer1.git
+  Push  URL: https://github.com/sergugol/primer1.git
+  HEAD branch: master
+  Remote branch:
+    master new (next fetch will store in remotes/prim1)
+  Local ref configured for 'git push':
+    master pushes to master (local out of date)
+
+serg@ubuntu:~/primer1$ git push prim1 master
+Username for 'https://github.com': sergugol
+Password for 'https://sergugol@github.com': 
+To https://github.com/sergugol/primer1.git
+
+git push prim1 master
+git pull prim1 master
+
+serg@ubuntu:~/primer1$ git pull prim1 master
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/sergugol/primer1
+ * branch            master     -> FETCH_HEAD
+Auto-merging .gitignore
+CONFLICT (add/add): Merge conflict in .gitignore
+Automatic merge failed; fix conflicts and then commit the result.
+serg@ubuntu:~/primer1$ git status
+# On branch master
+# Unmerged paths:
+#   (use "git add/rm <file>..." as appropriate to mark resolution)
+#
+#	both added:         .gitignore
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+----------------------
+потрібно узгоджувати файл .gitignore  локальний та ремоут
+================================================================
 TARGET:
 	Sorting colomns of Article tables on site wwww.up.mk.ua
+
 
 PLAN (Experiment with columns on Primer1 Application).
 	1. create table Articles ()
@@ -42,4 +86,4 @@ PLAN (Experiment with columns on Primer1 Application).
 
 	4. add colums sorting from lesson
 
-	 
+
